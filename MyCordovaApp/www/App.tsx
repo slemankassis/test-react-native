@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, TextInput, TouchableOpacity, Picker } from "react-native";
-import { HamburguerMenu } from "./assets/icons/HamburgerMenu";
-import { BottleWine } from "./assets/icons/BottleWine";
-import { DollarSymbol } from "./assets/icons/DollarSymbol";
-import { Avatar } from "./assets/icons/Avatar";
-import { Quantity } from "./assets/icons/Quantity";
-import { Plus } from "./assets/icons/Plus";
-import { MinusSymbol } from "./assets/icons/MinusSymbol";
-import { PlusSymbol } from "./assets/icons/PlusSymbol";
-import styles from "./styles";
+import HamburguerMenu from "./assets/icons/HamburgerMenu";
+import BottleWine from "./assets/icons/BottleWine";
+import DollarSymbol from "./assets/icons/DollarSymbol";
+import Avatar from "./assets/icons/Avatar";
+import Quantity from "./assets/icons/Quantity";
+import Plus from "./assets/icons/Plus";
+import MinusSymbol from "./assets/icons/MinusSymbol";
+import PlusSymbol from "./assets/icons/PlusSymbol";
+import styles from "./styles"; // Import the styles object from the previous conversion
 
 function App() {
   return (
@@ -45,9 +45,9 @@ function App() {
           <View style={styles.quantityButtonsWrapper}>
             <MinusSymbol />
             <TextInput
-              style={styles.fieldInput}
-              value="01"
+              style={[styles.fieldInput, styles.quantityInput]}
               keyboardType="numeric"
+              value="01"
             />
             <PlusSymbol />
           </View>
