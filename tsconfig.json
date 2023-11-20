@@ -18,12 +18,12 @@
   },
   "include": [
     "src",
-    "MyCordovaApp/www/react-app-env.d.ts",
-    "MyCordovaApp/www/reportWebVitals.ts",
-    "MyCordovaApp/www/setupTests.ts",
-    "MyCordovaApp/www/App.test.tsx",
-    "MyCordovaApp/www/App.tsx",
-    "MyCordovaApp/www/index.tsx",
-    "MyCordovaApp/www/assets"
+    "MyReactNativeApp/react-app-env.d.ts",
+    "MyReactNativeApp/reportWebVitals.ts",
+    "MyReactNativeApp/setupTests.ts",
+    "MyReactNativeApp/App.test.tsx",
+    "MyReactNativeApp/App.tsx",
+    "MyReactNativeApp/index.tsx",
+    "MyReactNativeApp/assets"
   ]
 }
