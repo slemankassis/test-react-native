@@ -1,86 +1,79 @@
 import React from "react";
+import { View, Text, TextInput, TouchableOpacity, Picker } from "react-native";
 import { HamburguerMenu } from "./assets/icons/HamburgerMenu";
 import { BottleWine } from "./assets/icons/BottleWine";
 import { DollarSymbol } from "./assets/icons/DollarSymbol";
-import "./App.css";
 import { Avatar } from "./assets/icons/Avatar";
 import { Quantity } from "./assets/icons/Quantity";
 import { Plus } from "./assets/icons/Plus";
 import { MinusSymbol } from "./assets/icons/MinusSymbol";
 import { PlusSymbol } from "./assets/icons/PlusSymbol";
+import styles from "./styles";
 
 function App() {
   return (
-    <div>
-      <div className="header">
-        <div className="hamburgerMenu">
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <View style={styles.hamburgerMenu}>
           <HamburguerMenu />
-        </div>
-        <h1>SMART WATER</h1>
-      </div>
-      <h2>Registrar nueva venta</h2>
-      <form>
-        <div className="form-group">
+        </View>
+        <Text style={styles.headerText}>SMART WATER</Text>
+      </View>
+      <Text style={styles.heading}>Registrar nueva venta</Text>
+      <View style={styles.form}>
+        <View style={styles.formGroup}>
           <Avatar />
-          {/* <label htmlFor="clientNumber">Número de cliente</label> */}
-          <input
-            className="fieldInput"
-            id="clientNumber"
-            name="clientNumber"
-            type="text"
+          <TextInput
+            style={styles.fieldInput}
             placeholder="Número de cliente"
           />
-        </div>
+        </View>
 
-        <div className="form-group">
+        <View style={styles.formGroup}>
           <BottleWine />
-          {/* <label htmlFor="product">Producto</label> */}
-          <select className="fieldInput selectInput" id="product">
-            <option>Producto</option>
-          </select>
-        </div>
+          <Picker style={styles.fieldInput}>
+            <Picker.Item label="Producto" value="" />
+          </Picker>
+        </View>
 
-        <div className="form-group">
-          <div className="quantityLabelWrapper">
+        <View style={styles.formGroup}>
+          <View style={styles.quantityLabelWrapper}>
             <Quantity />
-            <label htmlFor="quantity" className="labelInput">
-              Cantidad
-            </label>
-          </div>
+            <Text style={styles.labelInput}>Cantidad</Text>
+          </View>
 
-          <div className="quantityButtonsWrapper">
+          <View style={styles.quantityButtonsWrapper}>
             <MinusSymbol />
-            <input
-              className="fieldInput quantityInput"
-              type="text"
+            <TextInput
+              style={styles.fieldInput}
               value="01"
+              keyboardType="numeric"
             />
             <PlusSymbol />
-          </div>
-        </div>
+          </View>
+        </View>
 
-        <div className="form-group">
+        <View style={styles.formGroup}>
           <DollarSymbol />
-          {/* <label htmlFor="price">Agregar precio</label> */}
-          <input
-            className="fieldInput"
-            id="price"
-            name="price"
-            type="number"
+          <TextInput
+            style={styles.fieldInput}
             placeholder="Agregar precio"
+            keyboardType="numeric"
           />
-        </div>
+        </View>
 
-        <div className="addMoreButtonWrapper">
-          <div className="addMoreButton">
+        <TouchableOpacity style={styles.addMoreButtonWrapper}>
+          <View style={styles.addMoreButton}>
             <Plus />
-            <span className="buttonLabel">Agregar otro producto</span>
-          </div>
-        </div>
+            <Text style={styles.buttonLabel}>Agregar otro producto</Text>
+          </View>
+        </TouchableOpacity>
 
-        <input className="sellButton" type="submit" value="Vender" />
-      </form>
-    </div>
+        <TouchableOpacity style={styles.sellButton}>
+          <Text style={styles.buttonLabel}>Vender</Text>
+        </TouchableOpacity>
+      </View>
+    </View>
   );
 }
 
