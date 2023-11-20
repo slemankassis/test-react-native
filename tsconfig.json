@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -21,6 +17,13 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "MyCordovaApp/www/react-app-env.d.ts",
+    "MyCordovaApp/www/reportWebVitals.ts",
+    "MyCordovaApp/www/setupTests.ts",
+    "MyCordovaApp/www/App.test.tsx",
+    "MyCordovaApp/www/App.tsx",
+    "MyCordovaApp/www/index.tsx",
+    "MyCordovaApp/www/assets"
   ]
 }
